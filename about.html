@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="about.css">
+        
+    </head>
+    
+<body>
+    <header>
+        <div class="logo"><a href="index.html">
+        <h2 id="logos">Portfolio.</h2>
+        <h2 id="logo">Mr. Walican</h2>
+        </a></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>    
+    <h1 id="h1">About Me</h1>
+    <hr>
+        <div class="content">
+            <div id="aboutimg">
+            <img src="jaye.jpg" alt="">
+        </div>
+        <div id="contents">
+            <p>
+                Hi, I'm <strong>Ejay Walican</strong>, a passionate <strong>Web Designer</strong> and <strong>Web Developer</strong>. 
+                I love creating beautiful, functional websites that provide a seamless user experience. 
+                Currently, I am also a <strong>student</strong>, continuously learning and honing my skills to keep up with the ever-evolving world of web technology.
+            </p>
+            <p>
+                My journey in web development is fueled by creativity, problem-solving, and a strong dedication to crafting digital experiences that leave a lasting impact. 
+                I aim to blend innovative design with robust development to bring ideas to life on the web.
+            </p>
+            <a href="contact.html" class="btn">Contact Me</a>
+        </div>
+        </div>
+        <h2 id="h2">Skills</h2>
+        <hr>
+<div id="skills">
+    <div class="tabs">
+        <button class="tab active" onclick="showTab('tech-stack')">Tech-Stack</button>
+        <button class="tab" onclick="showTab('tools')">Tools</button>
+    </div>
+    <div id="tech-stack" class="tab-content">
+        <div class="skill-grid">
+            <div class="skill-item" ><img src="html.png" alt="">HTML</div>
+            <div class="skill-item"><img src="css.png" alt="">CSS</div>
+            <div class="skill-item"><img src="js.png" alt="">JavaScript</div>
+            <div class="skill-item"><img src="bootstrap.png" alt="">Bootstrap</div>
+            <div class="skill-item"><img src="w3css.png" alt="">W3.css</div>
+        </div>
+    </div>
+    <div id="tools" class="tab-content" style="display: none;">
+        <div class="skill-grid">
+            <div class="skill-item"><img src="vs.png" alt="">VS Code</div>
+            <div class="skill-item"><img src="git.png" alt="">Git</div>
+            <div class="skill-item"><img src="figma.png" alt="">Figma</div>
+        </div>
+    </div>
+</div>
+<script>function showTab(tabId) {
+    // Hide all tab contents
+    document.querySelectorAll('.tab-content').forEach(content => {
+        content.style.display = 'none';
+        content.classList.remove('active');
+    });
+
+    // Remove active class from all tabs
+    document.querySelectorAll('.tab').forEach(tab => {
+        tab.classList.remove('active');
+    });
+
+    // Show the selected tab content and activate the tab
+    document.getElementById(tabId).style.display = 'block';
+    document.getElementById(tabId).classList.add('active');
+    document.querySelector(`.tab[onclick="showTab('${tabId}')"]`).classList.add('active');
+}
+
+// Set default active tab
+document.addEventListener('DOMContentLoaded', () => {
+    showTab('tech-stack');
+});</script>
+
+    <footer>© 2024 Ejay Walican. All Rights Reserved.</footer>
+</body>
+</html>
